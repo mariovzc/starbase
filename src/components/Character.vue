@@ -1,6 +1,14 @@
 <template>
-  <div @click="switchCharacter">
-    {{character}}    
+  <div class="col-md-4" @click="switchCharacter">
+    <div class="character-card">
+      <div class="card-block">
+        <h4 class="card-title">{{character.name}}</h4>
+        <p class="card-text">Height: {{character.height}}cm</p>
+        <p class="card-text">Mass: {{character.mass}}kg</p>
+        <p class="card-text">Hair Color: {{character.hair_color}}</p>
+        <p class="card-text">Eye Color: {{character.eye_color}}</p>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -29,3 +37,11 @@ export default {
   }
 }
 </script>
+<style scoped>
+  .character-card{
+    border: 2px solid #4FC08D;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+
