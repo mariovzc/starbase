@@ -1,13 +1,12 @@
 <template>
   <div id="app">
     <h3>{{ title }}</h3>
-    <div class="col-md-12">
-      <Character 
-        v-for="(id, index) in initial_ids" 
-        :id="id"
-        key = "index"
-        />
-    </div>
+    <h4>
+      <router-link class="link" to="/data/people">Meet the characters</router-link> | 
+      <router-link class="link" to="/data/planets">Expore the Planets</router-link>|
+      <router-link class="link" to="/data/vehicles">look the vehicles</router-link>
+    </h4>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -26,6 +25,8 @@ export default {
   }
 }
 </script>
-<style lang="sass" scoped>
-
+<style  scoped>
+.link, .link:hover, .link:visited, .link:active {
+  color: #4FC08D !important;
+}
 </style>
