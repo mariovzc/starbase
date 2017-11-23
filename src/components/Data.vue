@@ -3,7 +3,8 @@
     <Item 
       v-for="(item, index) in items"
       v-bind:key="index"
-      :item="item"
+      :passed-item="item"
+      :type="type"
     />
   </div>
 </template>
