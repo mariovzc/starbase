@@ -1,13 +1,7 @@
 <template>
   <div id="app">
     <h3>{{ title }}</h3>
-    <div class="col-md-12">
-      <Character 
-        v-for="(id, index) in initial_ids" 
-        :id="id"
-        key = "index"
-        />
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 <script>
